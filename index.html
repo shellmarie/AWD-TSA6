@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login and Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="./assets/style/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tab">
+            <button class="tablinks active" onclick="openForm(event, 'Login')">Login</button>
+            <button class="tablinks" onclick="openForm(event, 'SignUp')">Sign Up</button>
+        </div>
+
+        <div id="Login" class="tabcontent">
+            <form>
+                <input type="text" id="email" name="email" placeholder="Enter Email or Username"><br>
+                <input type="password" id="pwd" name="pwd" placeholder="Enter Password"><br>
+                <input type="submit" value="Login">
+                <p class="forgotten-account">Forgotten Account</p>
+                <hr>
+                <button class="social-button google">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png" alt="Google logo">
+                    <span>Sign in with Google</span>
+                </button>
+                <button class="social-button linkedin">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png" alt="LinkedIn logo">
+                    <span>Sign in with LinkedIn</span>
+                </button>
+                <button class="social-button microsoft">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/1*MxZpRFN3hnZrCC05s1q73A.png" alt="Microsoft logo">
+                    <span>Sign in with Microsoft</span>
+                </button>
+            </form>
+        </div>
+
+        <div id="SignUp" class="tabcontent">
+            <p>Please fill in this form to create an account!</p>
+            <hr>
+            <form onsubmit="return displayData()">
+                <input type="text" id="signupFname" name="fname" placeholder="First Name"><br>
+                <input type="text" id="signupLname" name="lname" placeholder="Last Name"><br>
+                <input type="text" id="signupEmail" name="email" placeholder="Email"><br>
+                <input type="password" id="signupPwd" name="pwd" placeholder="Password" required>
+                <input type="password" id="signupCpwd" name="cpwd" placeholder="Confirm Password"><br>
+                <p class="terms">
+                    <input type="checkbox" id="terms" name="terms"> I accept the <a href="#" class="link">Terms and Conditions</a> & <a href="#" class="link">Privacy Policy</a>
+                </p>                
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+
+        <div id="SignUpDetails" class="tabcontent" style="display: none;">
+            <h2>Sign Up Details</h2>
+            <p id="details"></p>
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
